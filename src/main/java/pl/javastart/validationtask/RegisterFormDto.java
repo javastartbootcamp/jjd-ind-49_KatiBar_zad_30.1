@@ -22,7 +22,7 @@ public class RegisterFormDto {
     @Email
     private String email;
     @NotBlank(message = "Pole nie może być puste")
-    @Size(min=8, message = "Hasło musi mieć co najmniej 8 znaków")
+    @Size(min = 8, message = "Hasło musi mieć co najmniej 8 znaków")
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,}$",
             message = "{pl.javastart.validationtask.RegisterFormDto.password.pattern.message}")
     private String password;
