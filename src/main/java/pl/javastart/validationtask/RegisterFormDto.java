@@ -13,16 +13,18 @@ public class RegisterFormDto {
     @NotBlank
     private String address;
     @NotBlank
-    @Pattern(regexp = "[0-9][0-9]-[0-9][0-9][0-9]", message = "Wpisz poprawny kod pocztowy")
+    @Pattern(regexp = "[0-9][0-9]-[0-9][0-9][0-9]",
+            message = "{pl.javastart.validationtask.RegisterFormDto.postalCode.pattern.message}")
     private String postalCode;
     @NotBlank
     private String city;
+    @NotBlank
     @Email
     private String email;
     @NotBlank(message = "Pole nie może być puste")
-    @Size(min=8, message="Hasło musi mieć co najmniej 8 znaków")
+    @Size(min=8, message = "Hasło musi mieć co najmniej 8 znaków")
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,}$",
-            message = "Hasło musi zawierać min. 1 znak mały, duży i znak specjalny")
+            message = "{pl.javastart.validationtask.RegisterFormDto.password.pattern.message}")
     private String password;
     @AssertTrue
     private boolean termsAgreement;
