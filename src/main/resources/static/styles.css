@@ -1,0 +1,13 @@
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+label {
+    display: block;
+}
+
+.container {
+    width: 80%;
+    flex: auto;
+    margin-top: 5px;
+}
